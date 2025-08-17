@@ -1,5 +1,6 @@
 -- File: task_4.sql
--- Print full description of the books table without using DESCRIBE or EXPLAIN
+-- Print the full description of the books table
+-- Must not use DESCRIBE or ANALYZE
 
 SELECT 
     COLUMN_NAME,
