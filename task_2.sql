@@ -1,3 +1,4 @@
+Intro_to_DB/task_2.sql
 USE alx_book_store;
 
 CREATE TABLE IF NOT EXISTS AUTHORS (
