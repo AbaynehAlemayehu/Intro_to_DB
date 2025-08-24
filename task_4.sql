@@ -1,14 +1,12 @@
--- File: task_4.sql
--- Print the full description of the books table
--- Must not use DESCRIBE or ANALYZE
-
 SELECT 
-    COLUMN_NAME,
-    COLUMN_TYPE,
-    IS_NULLABLE,
-    COLUMN_KEY,
-    COLUMN_DEFAULT,
-    EXTRA
-FROM INFORMATION_SCHEMA.COLUMNS
-WHERE TABLE_SCHEMA = DATABASE()
-  AND TABLE_NAME = 'books';
+    COLUMN_NAME AS 'Column',
+    COLUMN_TYPE AS 'Type',
+    IS_NULLABLE AS 'Null',
+    COLUMN_KEY AS 'Key',
+    COLUMN_DEFAULT AS 'Default',
+    EXTRA AS 'Extra'
+FROM 
+    INFORMATION_SCHEMA.COLUMNS
+WHERE 
+    TABLE_SCHEMA = DATABASE()   -- dynamically uses the database passed to mysql
+    AND TABLE_NAME = 'BOOKS';
